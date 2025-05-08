@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #ffffff;
+    --bg-secondary: #ddd;
+    --color-main: #000;
+    --color-secondary: #222;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-main: #222;
+      --bg-secondary: #000;
+      --color-main: #fff;
+      --color-secondary: #ddd;
+    }
+  }
+}
+
+@layer utilities {
+  .absolute-center {@apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];}
+  .flex-center {@apply flex justify-center items-center;}
+}
