@@ -1,6 +1,7 @@
 import { Manrope } from "next/font/google";
 import { LocaleProvider } from './providers';
 import { cookies } from 'next/headers';
+import { Suspense } from 'react'
 import "./globals.css";
 
 
@@ -36,10 +37,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={manrope.className} suppressHydrationWarning>
-      <body className="bg-bg-main">
-        <LocaleProvider initialLocale={locale}>
-          {children}
-        </LocaleProvider>
+      <body className="bg-bg-main text-color-main">
+        <Suspense>
+          <LocaleProvider initialLocale={locale}>
+            {children}
+          </LocaleProvider>
+        </Suspense>
       </body>
     </html>
   );
