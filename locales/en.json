@@ -1,34 +1,56 @@
 {
-    "language" :"EN",
-    "signup": {
-      "title": "Create your account",
-      "email_address": "Email address",
-      "pwd": "Password",
-      "cpwd": "Confirm password",
-      "btn": "Sign up",
-      "or": "OR",
-      "login1": "Already have an account?",
-      "login2": "Log in",
-      "loading": "Creating account...",
-      "success": "Account created successfully!",
-      "errors": {
-        "password_mismatch": "Passwords don't match",
-        "password_length": "Password must be at least 6 characters",
-        "email_exists": "Email already exists. Please log in or reset your password",
-        "email_invalid": "Please enter a valid email address",
-        "general": "An error occurred. Please try again",
-        "oauth_failed": "Failed to sign in with provider",
-        "network_error": "Network error. Check your connection"
-      },
-      "oauth": {
-        "google": "Continue with Google",
-        "discord": "Continue with Discord"
-      },
-      "email_confirmation": {
-        "title": "Verify your email",
-        "message": "We've sent a confirmation link to your email",
-        "resend": "Resend confirmation",
-        "resend_success": "Confirmation email resent!"
-      }
+  "language": "EN",
+  "signup": {
+    "title": "Create your account",
+    "email_address": "Email address",
+    "pwd": "Password",
+    "cpwd": "Confirm password",
+    "btn": "Sign up",
+    "or": "or, continue with",
+    "login1": "Already have an account?",
+    "login2": "Log in",
+    "loading": "Creating account...",
+    "success": "Account created successfully!",
+    "errors": {
+      "password_mismatch": "Passwords don't match",
+      "password_length": "Password must be at least 6 characters",
+      "email_exists": "Email already exists. Please log in or reset your password",
+      "email_invalid": "Please enter a valid email address",
+      "general": "An error occurred. Please try again",
+      "oauth_failed": "Failed to sign in with provider",
+      "network_error": "Network error. Check your connection"
+    },
+    "oauth": {
+      "google": "Continue with Google",
+      "discord": "Continue with Discord"
+    },
+    "email_confirmation": {
+      "title": "Verify your email",
+      "message": "We've sent a confirmation link to your email",
+      "resend": "Resend confirmation",
+      "resend_success": "Confirmation email resent!"
+    }
+  },
+  "login": {
+    "title": "Welcome back",
+    "email": "Email address",
+    "pwd": "Password",
+    "btn": "Log in",
+    "or": "Or, continue with",
+    "signup1": "Don't have an account?",
+    "signup2": "Sign up",
+    "loading": "Logging in...",
+    "success": "Login successful! Redirecting...",
+    "oauth": {
+      "google": "Google",
+      "discord": "Discord"
+    },
+    "errors": {
+      "empty_fields": "Please fill in all fields",
+      "invalid_credentials": "Invalid email or password",
+      "general": "An error occurred. Please try again",
+      "oauth_failed": "Failed to login with provider",
+      "network_error": "Network error. Check your connection"
     }
   }
+}

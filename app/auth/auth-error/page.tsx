@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 export default function AuthErrorPage({
   searchParams,
 }: {
-  searchParams: { message: string }
+  searchParams: { message: any }
 }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">

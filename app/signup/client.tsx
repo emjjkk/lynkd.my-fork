@@ -76,7 +76,7 @@ export default function SignUpPage(props: any) {
         } catch (error) {
             toast.error(t.signup.errors.general);
         } finally {
-            setLoading(false);
+            setLoading(true);
         }
     };
 
