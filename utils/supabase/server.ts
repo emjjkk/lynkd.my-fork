@@ -1,7 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-export const createClient = async (cookieStore: unknown) => {
+export const createClient = async () => {
   const cookieStore = await cookies();
 
   return createServerClient(
@@ -18,12 +18,10 @@ export const createClient = async (cookieStore: unknown) => {
               cookieStore.set(name, value, options);
             });
           } catch (error) {
-            // The `set` method was called from a Server Component.
-            // This can be ignored if you have middleware refreshing
-            // user sessions.
+            // This can be ignored if you have middleware refreshing user sessions.
           }
         },
       },
-    },
+    }
   );
 };
