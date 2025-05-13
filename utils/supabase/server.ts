@@ -18,10 +18,12 @@ export const createClient = async () => {
               cookieStore.set(name, value, options);
             });
           } catch (error) {
-            // This can be ignored if you have middleware refreshing user sessions.
+            // The `set` method was called from a Server Component.
+            // This can be ignored if you have middleware refreshing
+            // user sessions.
           }
         },
       },
-    }
+    },
   );
 };
