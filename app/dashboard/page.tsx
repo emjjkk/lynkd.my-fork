@@ -2,7 +2,7 @@ import Client from './client'
 import { cookies } from 'next/headers';
 import { getTranslations } from '@/lib/i18n';
 
-export const metadata = {title: "Dashboard | lynkd.my"};
+export const metadata = {title: "General | lynkd.my"}; 
 export default async function Signup(){
     const cookieStore = cookies();
     const locale = (await cookieStore).get('NEXT_LOCALE')?.value as 'en' | 'zh' || 'en';

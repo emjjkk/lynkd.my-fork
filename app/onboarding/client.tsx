@@ -69,6 +69,12 @@ export default function OnboardingClient(props: any) {
 
     setLoading(true)
     try {
+
+      const pfp = user.user_metadata?.avatar_url || 
+                user.user_metadata?.picture || 
+                user.identities?.[0]?.identity_data?.avatar_url || 
+                "/assets/images/default-pfp.png"; // fallback to default image
+
       // Update user profile
       const { error } = await supabase.from("users").upsert({
         user_id: user.id,
@@ -77,6 +83,7 @@ export default function OnboardingClient(props: any) {
         visibility: 'public',
         current_theme: selectedTheme,
         page_data: {
+          pfp: pfp,
           display_name: user.user_metadata?.full_name || user.email,
           bio: "A Lynkd.my user",
           links: {
@@ -99,7 +106,7 @@ export default function OnboardingClient(props: any) {
       if(error) throw error
 
       // Redirect to dashboard
-      router.push(`/${username}`)
+      router.push(`/dashboard?tutorial=true`)
       } catch (error) {
         console.error("Error completing onboarding:", error)
       } finally {

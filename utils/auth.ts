@@ -1,6 +1,7 @@
 import { createClient } from './supabase/client'
 
 export type UserData = {
+  id: any
   auth: any // User data from auth.users
   profile: any // User data from public.users
 }
@@ -23,7 +24,7 @@ export async function getAuthenticatedUser(): Promise<{
     const { data: profileData, error: profileError } = await supabase
       .from('users')
       .select('*')
-      .eq('uid', authUser.id)
+      .eq('user_id', authUser.id)
       .single()
 
     if (profileError || !profileData) {

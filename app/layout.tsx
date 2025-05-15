@@ -37,7 +37,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={manrope.className} suppressHydrationWarning>
-      <body className="bg-bg-main text-color-main">
+      <body className="bg-bg-main text-color-main" suppressHydrationWarning>
         <Suspense>
           <LocaleProvider initialLocale={locale}>
             {children}

@@ -7,12 +7,12 @@
     --bg-main: #ddd;
     --bg-secondary: #ffffff;
     --color-main: #000;
-    --color-secondary: #222;
+    --color-secondary: #111;
     
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg-main: #222;
+      --bg-main: #111;
       --bg-secondary: #000;
       --color-main: #fff;
       --color-secondary: #ddd;
